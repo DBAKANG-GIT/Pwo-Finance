@@ -7,19 +7,29 @@
     "skipLibCheck": true,
 
     /* Bundler mode */
-    "moduleResolution": "bundler",
+    "moduleResolution": "node",
     "allowImportingTsExtensions": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react-jsx",
+    "types": [
+      /* Specify type package names to be included without being referenced in a source file. */
+      "cypress",
+      "node",
+      "@testing-library/cypress"
+    ],
 
     /* Linting */
     "strict": true,
+    "alwaysStrict": true /* Ensure 'use strict' is always emitted. */,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true
+    "noFallthroughCasesInSwitch": true,
+    "allowSyntheticDefaultImports": true
   },
-  "include": ["src"],
+  "include": ["src", "cypress.d.ts", "cypress"],
+  "exclude": ["node_modules"],
+
   "references": [{ "path": "./tsconfig.node.json" }]
 }
