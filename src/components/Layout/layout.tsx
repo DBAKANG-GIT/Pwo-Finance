@@ -1,14 +1,11 @@
 import NavbarSimple from '../Navbar/navbar';
 import { FooterWithLogo } from '../Footer/footer';
-import logo from '../../assets/PWO_logo.jpg';
-const navbarItems = [
-  { text: 'Home', href: '/' },
-  { text: 'About', href: '/about' },
-  { text: 'Services', href: '/service' },
-  { text: 'Contact', href: '/contact-us' },
+import logo from '../../assets/logo.png';
+const navItems = [
   { text: 'Blog', href: '/blog' },
-
-  // ... other items
+  { text: 'About', href: '/about' },
+  { text: 'Contact', href: '/contact' },
+  { text: 'Services', href: '/services' },
 ];
 
 const footerItems = [
@@ -30,9 +27,9 @@ const Layout = ({ children, title }: LayoutProps) => {
 
   return (
     <>
-      <NavbarSimple items={navbarItems} />
-      {/* <main>{children}</main> */}
-      {/* <FooterWithLogo logo={logo} items={footerItems}></FooterWithLogo> */}
+      <NavbarSimple items={navItems} />
+      <main>{children}</main>
+      <FooterWithLogo logo={logo} items={footerItems}></FooterWithLogo>
     </>
   );
 };
