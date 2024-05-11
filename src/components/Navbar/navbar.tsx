@@ -63,7 +63,7 @@ export default function NavbarSimple({ items }: NavListProps) {
   }, []);
 
   return (
-    <Navbar className="mx-auto max-w-screen-xl px-6 pt-3">
+    <Navbar className="mx-auto max-w-full px-6 pt-3">
       <div className="flex items-center justify-between text-blue-gray-900">
         <Link to="/">
           <img src={logo} alt="logo-ct" className="w-24" />
