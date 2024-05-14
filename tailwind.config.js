@@ -7,6 +7,11 @@ export default withMT({
     extend: {
       colors: {
         swampGreen: '#606C38',
+        black: '#343434',
+        lightGrey: '#595959',
+      },
+      fontFamily: {
+        poppins: ['Poppins', 'sans-serif'],
       },
     },
   },
