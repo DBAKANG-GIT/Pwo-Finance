@@ -13,6 +13,9 @@ export default withMT({
       fontFamily: {
         poppins: ['Poppins', 'sans-serif'],
       },
+      lineHeight: {
+        174: '1.74',
+      },
     },
   },
   plugins: [],

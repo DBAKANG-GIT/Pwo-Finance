@@ -7,6 +7,7 @@ describe('Hero component', () => {
       title: 'Test Title',
       subtitle: 'Test Subtitle',
       buttonText: 'Test Button',
+      href: '/',
       image: '',
     };
     cy.mount(
@@ -15,7 +16,8 @@ describe('Hero component', () => {
           title={props.title}
           subtitle={props.subtitle}
           buttonText={props.buttonText}
-          image=""
+          buttonHref={props.href}
+          image={props.image}
         />
       </Router>
     );
