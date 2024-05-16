@@ -18,7 +18,7 @@ const AboutSection: React.FC<AboutSectionProps> = ({
 
   return (
     <div className="bg-white p-6 my-6 rounded-lg shadow-md flex flex-col sm:flex-row items-center space-y-4 sm:space-y-0 sm:space-x-4">
-      <div className="relative flex items-center justify-center w-20 h-20 sm:w-40 sm:h-40">
+      <div className="relative flex items-center justify-center w-20 h-20 sm:w-40 sm:h-40 lg:w-[80rem]">
         <EllipseIcon
           color={iconColor}
           className="absolute w-full h-full fill-current"

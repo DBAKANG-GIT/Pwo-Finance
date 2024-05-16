@@ -10,6 +10,7 @@ const Home: React.FC = () => {
         title="Unlock Your Property Potential with Expert Complex Mortgages"
         subtitle="Tailored Solutions for Property Investors and Developers"
         buttonText="Get Started"
+        buttonHref="/about"
       />
     </>
   );
