@@ -9,6 +9,7 @@ export default withMT({
         swampGreen: '#606C38',
         black: '#343434',
         lightGrey: '#595959',
+        lightPink: '#f3e6de',
       },
       fontFamily: {
         poppins: ['Poppins', 'sans-serif'],

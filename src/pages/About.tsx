@@ -5,7 +5,7 @@ import image from '../assets/about.jpg';
 const About: React.FC = () => {
   return (
     <>
-      <div className="container mx-auto">
+      <div className="container mx-auto ">
         <div
           id="header-container"
           className="flex flex-col md:flex-row items-start md:items-center"
