@@ -1,5 +1,5 @@
-import PortfolioImage from '@/assets/PropertyPortfolioFinance.webp';
-import DevelopmentImage from '@/assets/Development-Finance.webp';
+import PortfolioImage from '@/assets/PropertyPortolio.webp';
+import DevelopmentImage from '@/assets/DevelopmentFinance.webp';
 import BridgingImage from '@/assets/Bridgingfinance.webp';
 import CommercialImage from '@/assets/CommercialFinance.webp';
 const services = [
