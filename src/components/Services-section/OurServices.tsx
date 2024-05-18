@@ -1,27 +1,31 @@
+import PortfolioImage from '@/assets/PropertyPortfolioFinance.webp';
+import DevelopmentImage from '@/assets/Development-Finance.webp';
+import BridgingImage from '@/assets/Bridgingfinance.webp';
+import CommercialImage from '@/assets/CommercialFinance.webp';
 const services = [
   {
     title: 'Property Portfolio Finance',
     description:
       'Comprehensive Financing Strategies To Optimise Your Property Investment Portfolio.',
-    image: 'src/assets/PropertyPortfolioFinance.webp',
+    image: PortfolioImage,
   },
   {
     title: 'Development Finance',
     description:
       'Funding Options To Support Property Development Projects From Inception To Completion.',
-    image: 'src/assets/Development-Finance.webp',
+    image: DevelopmentImage,
   },
   {
     title: 'Bridging Finance',
     description:
       'Quick, Short-Term Financing Solutions To Bridge The Gap Between Transactions.',
-    image: 'src/assets/Bridgingfinance.webp',
+    image: BridgingImage,
   },
   {
     title: 'Commercial Finance',
     description:
       'Tailored Mortgage Solutions For Commercial Properties, Ensuring Financial Viability And Growth.',
-    image: 'src/assets/CommercialFinance.webp',
+    image: CommercialImage,
   },
 ];
 
