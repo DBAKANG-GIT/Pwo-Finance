@@ -1,6 +1,7 @@
 import NavbarSimple from '../Navbar/navbar';
 import { FooterWithLogo } from '../Footer/footer';
 import logo from '../../assets/logo.png';
+import useDocumentTitle from '@/hooks/useDocumentTitle';
 const navItems = [
   { text: 'Blog', href: '/blog' },
   { text: 'About', href: '/about' },
@@ -23,8 +24,7 @@ interface LayoutProps {
 }
 
 const Layout = ({ children, title }: LayoutProps) => {
-  // useDocumentTitle(title);
-
+  useDocumentTitle({ title });
   return (
     <>
       <NavbarSimple items={navItems} />
