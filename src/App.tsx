@@ -6,6 +6,7 @@ import BlogPage from './pages/Blog';
 import ServicesPage from './pages/Services';
 import ContactPage from './pages/Contact';
 import NotFoundPage from './pages/NoPage';
+import PrivacyPage from './pages/PrivacyPolicy';
 // import { Toaster } from 'react-hot-toast';
 
 function App() {
@@ -15,7 +16,7 @@ function App() {
         <Route
           path="/"
           element={
-            <Layout title="PWOFinances | Home">
+            <Layout title="Home | PWOFinances">
               <HomePage />
             </Layout>
           }
@@ -23,7 +24,7 @@ function App() {
         <Route
           path="/about"
           element={
-            <Layout title="PWOFinances | About">
+            <Layout title="About | PWOFinances">
               <AboutPage />
             </Layout>
           }
@@ -31,7 +32,7 @@ function App() {
         <Route
           path="/blog"
           element={
-            <Layout title="PWOFinances | Blog">
+            <Layout title="Blog | PWOFinances">
               <BlogPage />
             </Layout>
           }
@@ -39,7 +40,7 @@ function App() {
         <Route
           path="/services"
           element={
-            <Layout title="PWOFinances | Services">
+            <Layout title="Services | PWOFinances">
               <ServicesPage />
             </Layout>
           }
@@ -47,15 +48,23 @@ function App() {
         <Route
           path="/contact"
           element={
-            <Layout title="PWOFinances | Contact">
+            <Layout title="Contact | PWOFinances">
               <ContactPage />
+            </Layout>
+          }
+        />
+        <Route
+          path="/privacy-policy"
+          element={
+            <Layout title="Privacy Policy | PWOFinances">
+              <PrivacyPage />
             </Layout>
           }
         />
         <Route
           path="*"
           element={
-            <Layout title="PWOFinances | 404:Page Not Found">
+            <Layout title="404:Page Not Found | PWOFinances">
               <NotFoundPage />
             </Layout>
           }

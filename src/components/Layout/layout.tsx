@@ -14,7 +14,7 @@ const footerItems = [
     text: 'About',
     href: '/about',
   },
-  { text: 'Privacy Notice', href: '/privacy' },
+  { text: 'Privacy Notice', href: '/privacy-policy' },
   { text: 'Contact', href: '/contact-us' },
 ];
 

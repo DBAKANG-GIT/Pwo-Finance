@@ -17,7 +17,7 @@ describe('Hero component', () => {
           subtitle={props.subtitle}
           buttonText={props.buttonText}
           buttonHref={props.href}
-          image={props.image}
+          video={props.image}
         />
       </Router>
     );
