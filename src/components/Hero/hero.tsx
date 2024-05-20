@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 interface HeroProps {
   title: string;
   subtitle: string;
-  image: string; // Add a new prop for the image
+  video: string; // Add a new prop for the image
   buttonText: string;
   buttonHref: string;
 }
@@ -11,16 +11,18 @@ interface HeroProps {
 const Hero: React.FC<HeroProps> = ({
   title,
   subtitle,
-  image,
+  video,
   buttonText,
   buttonHref,
 }) => {
   return (
     <div className="relative bg-gradient-to-r from-purple-600 to-blue-600 h-screen text-white overflow-hidden">
       <div className="absolute inset-0">
-        <img
-          src={image}
-          alt="Background Image"
+        <video
+          src={video}
+          autoPlay
+          loop
+          muted
           className="object-cover object-center w-full h-full"
         />
         <div className="absolute inset-0 bg-black opacity-50"></div>
