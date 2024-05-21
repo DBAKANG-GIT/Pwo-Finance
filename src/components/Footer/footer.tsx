@@ -1,5 +1,6 @@
 import { Typography } from '@material-tailwind/react';
 import { SocialLinks } from '../Social-Link/social-link';
+import { Link } from 'react-router-dom';
 interface FooterItem {
   text: string;
   href: string;
@@ -19,14 +20,13 @@ export function FooterWithLogo({ logo, items }: FooterWithLogoProps) {
         <ul className="flex flex-wrap items-center gap-y-2 gap-x-8">
           {items.map((item) => (
             <li key={item.text}>
-              <Typography
-                as="a"
-                href={item.href}
+              <Link
+                to={item.href}
                 color="blue-gray"
                 className="font-normal transition-colors hover:text-blue-500 focus:text-blue-500"
               >
                 {item.text}
-              </Typography>
+              </Link>
             </li>
           ))}
         </ul>
