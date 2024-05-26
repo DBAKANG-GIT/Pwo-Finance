@@ -13,7 +13,7 @@ import {
 export function InputWithDropdown() {
   const { countries } = useCountries();
   const defaultCountryIndex = countries.findIndex(
-    (country) => country.name === 'United Kingdom'
+    (country: { name: string }) => country.name === 'United Kingdom'
   );
 
   const [country, setCountry] = React.useState(
@@ -40,23 +40,25 @@ export function InputWithDropdown() {
           </Button>
         </MenuHandler>
         <MenuList className="max-h-[20rem] max-w-[18rem]">
-          {countries.map(({ name, flags, countryCallingCode }, index) => {
-            return (
-              <MenuItem
-                key={name}
-                value={name}
-                className="flex items-center gap-2"
-                onClick={() => setCountry(index)}
-              >
-                <img
-                  src={flags.svg}
-                  alt={name}
-                  className="h-5 w-5 rounded-full object-cover"
-                />
-                {name} <span className="ml-auto">{countryCallingCode}</span>
-              </MenuItem>
-            );
-          })}
+          {countries.map(
+            ({ name, flags, countryCallingCode }: any, index: any) => {
+              return (
+                <MenuItem
+                  key={name}
+                  value={name}
+                  className="flex items-center gap-2"
+                  onClick={() => setCountry(index)}
+                >
+                  <img
+                    src={flags.svg}
+                    alt={name}
+                    className="h-5 w-5 rounded-full object-cover"
+                  />
+                  {name} <span className="ml-auto">{countryCallingCode}</span>
+                </MenuItem>
+              );
+            }
+          )}
         </MenuList>
       </Menu>
 
