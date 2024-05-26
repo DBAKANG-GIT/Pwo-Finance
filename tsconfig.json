@@ -19,7 +19,7 @@
     "baseUrl": ".",
     "paths": { "@/*": ["src/*"] }
   },
-  "include": ["src", "cypress.d.ts"],
+  "include": ["src", "cypress.d.ts", "declarations.d.ts"],
   "references": [{ "path": "./tsconfig.node.json" }],
   "exclude": ["cypress.config.ts", "cypress", "node_modules"]
 }
