@@ -2,9 +2,11 @@ import React from 'react';
 import { Button } from '@material-tailwind/react';
 import AboutSection from '../components/About-section/about-section';
 import image from '../assets/about.jpg';
+import { useNavigate } from 'react-router-dom';
 const About: React.FC = () => {
+  const navigate = useNavigate();
   return (
-    <>
+    <div className="bg-lightPink min-h-screen ">
       <div className="container mx-auto ">
         <div
           id="header-container"
@@ -25,8 +27,11 @@ const About: React.FC = () => {
               resources they need to succeed in the competitive real estate
               market.
             </p>
-            <Button className="w-full md:w-auto bg-gradient-to-r from-swampGreen to-blue-500 hover:from-pink-500 hover:to-yellow-500">
-              Get Started
+            <Button
+              className="w-full md:w-auto bg-gradient-to-r from-swampGreen to-blue-500 hover:from-pink-500 hover:to-yellow-500"
+              onClick={() => navigate('/contact-us')}
+            >
+              Get In Contact
             </Button>
           </div>
         </div>
@@ -37,7 +42,7 @@ const About: React.FC = () => {
               number="01"
               title="Our Story"
               iconColor="#F9A526"
-              content="Founded in [year], PWO Finance has been a trusted partner for clients navigating the complexities of property financing. Our journey began with a vision to revolutionize the mortgage brokerage industry by providing tailored solutions and personalized service."
+              content="Founded in 2019, PWO Finance has been a trusted partner for clients navigating the complexities of property financing. Our journey began with a vision to revolutionize the mortgage brokerage industry by providing tailored solutions and personalized service."
             />
             <AboutSection
               number="02"
@@ -49,7 +54,13 @@ const About: React.FC = () => {
               number="03"
               title="Our Approach"
               iconColor="#26F9BA"
-              content={`We believe in simplifying the mortgage process for our clients. Our approach is straightforward:Timely Communication: Prompt responses and regular updates throughout the process. Personalized Service: Tailored support and guidance from experienced professionals. Comprehensive Solutions: Customized mortgage options to meet your specific needs. Expert Advice: Access to industry expertise for informed decision-making.`}
+              content="We believe in:"
+              bulletPoints={[
+                'Timely Communication: Prompt responses and regular updates throughout the process.',
+                'Personalized Service: Tailored support and guidance from experienced professionals.',
+                'Comprehensive Solutions: Customized mortgage options to meet your specific needs.',
+                'Expert Advice: Access to industry expertise for informed decision-making.',
+              ]}
             />
           </section>
 
@@ -65,7 +76,7 @@ const About: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
