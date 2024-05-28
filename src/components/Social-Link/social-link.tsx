@@ -48,7 +48,7 @@ export function SocialLinks() {
       {/* Twitter */}
       <Typography
         as="a"
-        href="#"
+        href="https://x.com/Pwomortgages"
         className="opacity-80 transition-opacity hover:opacity-100"
       >
         <svg
@@ -63,4 +63,3 @@ export function SocialLinks() {
     </div>
   );
 }
-``;

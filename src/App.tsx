@@ -22,7 +22,7 @@ function App() {
           }
         />
         <Route
-          path="/about"
+          path="/about-us"
           element={
             <Layout title="About | PWOFinances">
               <AboutPage />
@@ -46,7 +46,7 @@ function App() {
           }
         />
         <Route
-          path="/contact"
+          path="/contact-us"
           element={
             <Layout title="Contact | PWOFinances">
               <ContactPage />

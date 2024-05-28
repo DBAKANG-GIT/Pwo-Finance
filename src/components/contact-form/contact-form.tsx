@@ -12,12 +12,7 @@ export function ContactSection({
   formAction,
 }: ContactSectionProps) {
   return (
-    <section className="grid grid-cols-1 gap-x-12 gap-y-6 lg:grid-cols-2 items-start">
-      <img
-        src={contactImage}
-        alt="map"
-        className="w-full h-[300px] hidden lg:block  object-cover object-center md:h-auto lg:max-h-[510px]"
-      />
+    <section className="grid  items-start">
       <form
         name="callback-form"
         id="callback-form"

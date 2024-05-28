@@ -47,3 +47,5 @@ export function ContactHeader({ title, subtitle }: ContactHeaderProps) {
     </section>
   );
 }
+
+// TODO: get rid of image, change inmage on about, add an image on mobile, fhnage the bridign f finance image
