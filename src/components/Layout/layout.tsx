@@ -2,8 +2,8 @@ import NavbarSimple from '../Navbar/navbar';
 import { FooterWithLogo } from '../Footer/footer';
 import logo from '../../assets/logo.png';
 import useDocumentTitle from '@/hooks/useDocumentTitle';
+import { useEffect } from 'react';
 const navItems = [
-  { text: 'Blog', href: '/blog' },
   { text: 'About', href: '/about-us' },
   { text: 'Contact', href: '/contact-us' },
   { text: 'Services', href: '/services' },
@@ -25,6 +25,9 @@ interface LayoutProps {
 
 const Layout = ({ children, title }: LayoutProps) => {
   useDocumentTitle({ title });
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, [title]);
   return (
     <>
       <NavbarSimple items={navItems} />
