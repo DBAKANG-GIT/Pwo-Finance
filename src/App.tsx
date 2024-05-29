@@ -29,14 +29,7 @@ function App() {
             </Layout>
           }
         />
-        <Route
-          path="/blog"
-          element={
-            <Layout title="Blog | PWOFinances">
-              <BlogPage />
-            </Layout>
-          }
-        />
+
         <Route
           path="/services"
           element={

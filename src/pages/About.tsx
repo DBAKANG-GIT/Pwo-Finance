@@ -1,31 +1,30 @@
 import React from 'react';
 import { Button } from '@material-tailwind/react';
 import AboutSection from '../components/About-section/about-section';
-import image from '../assets/about.jpg';
+import image from '../assets/shard.webp';
 import { useNavigate } from 'react-router-dom';
+import Reviews from '../components/Review-section/reviews';
+
 const About: React.FC = () => {
   const navigate = useNavigate();
   return (
-    <div className="bg-lightPink min-h-screen ">
-      <div className="container mx-auto ">
+    <div className="bg-lightPink min-h-screen">
+      <div className="container mx-auto px-4 py-8">
         <div
           id="header-container"
-          className="flex flex-col md:flex-row items-start md:items-center"
+          className="flex flex-col md:flex-row items-start md:items-center mb-8"
         >
           <div id="header-text" className="md:w-1/2">
             {/* Text section on the left */}
-            <h1 className="text-black text-4xl font-normal font-semibold leading-loose tracking-tight capitalize m-8 mb-0">
+            <h1 className="text-black text-4xl font-normal font-semibold leading-loose tracking-tight capitalize mb-4">
               Welcome to PWO Finance
             </h1>
           </div>
 
-          <div id="header-paragraph-button" className="md:w-1/2 m-8">
+          <div id="header-paragraph-button" className="md:w-1/2">
             <p className="text-base font-normal leading-loose text-lightGrey mb-4">
-              At PWO Finance, we believe in unlocking the potential of UK
-              property investments through specialized mortgage solutions. Our
-              mission is to empower investors and developers with the financial
-              resources they need to succeed in the competitive real estate
-              market.
+              Unlock the potential of UK property investments with our
+              specialized mortgage solutions.
             </p>
             <Button
               className="w-full md:w-auto bg-gradient-to-r from-swampGreen to-blue-500 hover:from-pink-500 hover:to-yellow-500"
@@ -36,44 +35,69 @@ const About: React.FC = () => {
           </div>
         </div>
 
-        <div className="lg:grid lg:grid-cols-4 gap-10">
-          <section className="lg:col-span-2">
+        <div className="lg:grid lg:grid-cols-4 gap-6">
+          <section className="lg:col-span-2 mb-8 lg:mb-0">
             <AboutSection
               number="01"
               title="Our Story"
               iconColor="#F9A526"
-              content="Founded in 2019, PWO Finance has been a trusted partner for clients navigating the complexities of property financing. Our journey began with a vision to revolutionize the mortgage brokerage industry by providing tailored solutions and personalized service."
+              content="Founded in 2019, PWO Finance has been a trusted partner in property financing. Our vision is to revolutionize the mortgage industry with tailored solutions and personalized service."
             />
             <AboutSection
               number="02"
               title="Meet Our Team"
               iconColor="#26F93B"
-              content="At PWO Finance, our team is the heart of our business. Comprised of seasoned experts in the mortgage industry, each member brings a unique set of skills and experience to the table. From mortgage advisors to financial analysts, our team is dedicated to providing exceptional service and guidance every step of the way."
+              content="Our expert team, from advisors to analysts, is dedicated to providing exceptional service and guidance."
             />
             <AboutSection
               number="03"
               title="Our Approach"
               iconColor="#26F9BA"
-              content="We believe in:"
-              bulletPoints={[
-                'Timely Communication: Prompt responses and regular updates throughout the process.',
-                'Personalized Service: Tailored support and guidance from experienced professionals.',
-                'Comprehensive Solutions: Customized mortgage options to meet your specific needs.',
-                'Expert Advice: Access to industry expertise for informed decision-making.',
-              ]}
+              content="We believe in timely communication, personalized service, comprehensive solutions, and expert advice."
+            />
+            <AboutSection
+              number="04"
+              title="Complex Mortgages"
+              iconColor="#F92672"
+              content="We offer specialized loans to help investors and developers finance property investments and projects. These include bridging finance, development finance, commercial finance, and property portfolio financing. Complex mortgages come with higher risks and fees, so expert guidance is essential."
+            />
+            <AboutSection
+              number="05"
+              title="Our Specialties"
+              iconColor="#F9C526"
+              content="At PWO Finance, we specialize in property financing, bridging finance, development finance, commercial mortgages, buy-to-let properties, and infrastructure development."
             />
           </section>
 
-          <div className="hidden lg:block lg:col-span-2 h-full">
+          <div className="lg:col-span-2 h-full">
             {/* Image section on the right */}
             <div className="p-6 bg-[#f3e6de] rounded-[25px] shadow-md relative overflow-hidden custom-shape">
               <img
                 src={image}
-                alt="Decorative"
+                alt="Cityscape"
                 className="w-full h-full object-cover rounded-[20px] transform transition-transform duration-300 ease-in-out hover:scale-105"
               />
             </div>
           </div>
+        </div>
+
+        {/* Testimonials Section */}
+        {/* Google Reviews Section */}
+        <Reviews />
+
+        {/* CTA Section */}
+        <div className="mt-12 text-center">
+          <h2 className="text-3xl font-semibold mb-4">Ready to Get Started?</h2>
+          <p className="text-gray-700 mb-6">
+            Contact us today to discuss your property financing needs and
+            discover how we can help you achieve your investment goals.
+          </p>
+          <Button
+            className="bg-gradient-to-r from-swampGreen to-blue-500 hover:from-pink-500 hover:to-yellow-500"
+            onClick={() => navigate('/contact-us')}
+          >
+            Contact Us
+          </Button>
         </div>
       </div>
     </div>
