@@ -17,7 +17,7 @@ const AboutSection: React.FC<AboutSectionProps> = ({
   bulletPoints,
 }) => {
   return (
-    <div className="bg-white p-4 my-6 rounded-lg shadow-md flex flex-col sm:flex-row items-center space-y-4 sm:space-y-0 sm:space-x-4 mx-4 transform transition-transform duration-300 ease-in-out hover:scale-105 hover:cursor">
+    <div className="bg-white p-4 my-6 rounded-lg shadow-md flex flex-col sm:flex-row items-center space-y-4 sm:space-y-0 sm:space-x-4 mx-4 transform transition-transform duration-300 ease-in-out hover:scale-105 hover:cursor-pointer hover:opacity-90">
       <div className="relative flex items-center justify-center w-20 h-20 sm:w-40 sm:h-40 lg:w-24 lg:h-24">
         <EllipseIcon
           color={iconColor}
