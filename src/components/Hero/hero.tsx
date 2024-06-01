@@ -23,6 +23,7 @@ const Hero: React.FC<HeroProps> = ({
           autoPlay
           loop
           muted
+          playsInline
           className="object-cover object-center w-full h-full"
         />
         <div className="absolute inset-0 bg-black opacity-50"></div>
