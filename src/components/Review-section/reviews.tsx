@@ -26,14 +26,6 @@ const Reviews = () => {
       time: '2 years ago',
     },
     {
-      name: 'benjamin kwofie',
-      review:
-        'Very honest and dedicated in helping clients. Thank you for your service.',
-      response:
-        'Thank you Benjamin. We very grateful to be of service to you. We do appreciate helping landlords build portfolios.',
-      time: '2 years ago',
-    },
-    {
       name: 'sandra yamoah',
       review:
         'Very professional, helpful, understanding and value and always aim to provide individualize customer service.',
@@ -48,14 +40,6 @@ const Reviews = () => {
       response:
         'Thank you Priscilla!! We are very grateful to be of service and appreciate your kind words!! May God bless you abundantly!!',
       time: 'a year ago',
-    },
-    {
-      name: 'kamille Hendricks',
-      review:
-        'Great service! Professional and all carried out in a timely fashion - thank you!',
-      response:
-        'Absolutely Thankful to work with you Kamille. Thank you very much for trusting us.',
-      time: '2 years ago',
     },
     {
       name: 'Thelma Allen',

@@ -1,16 +1,15 @@
 import { InputWithDropdown } from '../Input-dropdown/Input-dropdown';
 import { Button, Input, Textarea, Typography } from '@material-tailwind/react';
 import { ButtonGroup } from '@/components/button-group/button-group';
+import { useState } from 'react';
 
 interface ContactSectionProps {
-  contactImage: string;
   formAction: string;
 }
 
-export function ContactSection({
-  contactImage,
-  formAction,
-}: ContactSectionProps) {
+export function ContactSection({ formAction }: ContactSectionProps) {
+  const [selectedButton, setSelectedButton] = useState('');
+
   return (
     <section className="grid  items-start">
       <form
@@ -28,7 +27,10 @@ export function ContactSection({
           Select Options for Business Engagement
         </Typography>
         <div className="flex gap-4">
-          <ButtonGroup />
+          <ButtonGroup
+            setSelectedButton={setSelectedButton}
+            selectedButton={selectedButton}
+          />
         </div>
         <div className="grid md:grid-cols-2 gap-4">
           <Input

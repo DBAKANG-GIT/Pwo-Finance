@@ -64,6 +64,7 @@ export default function NavbarSimple({ items }: NavListProps) {
 
   return (
     <Navbar className="mx-auto max-w-full px-6 pt-3">
+      {/* <div className="bg-lightPink h-12 w-screen sm:bg-yellow-500 md:bg-blue-500 lg:bg-pink-500 xl:bg-secondary"></div> */}
       <div className="flex items-center justify-between text-blue-gray-900">
         <Link to="/">
           <img src={logo} alt="logo-ct" className="w-24" />

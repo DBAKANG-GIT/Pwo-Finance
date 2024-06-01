@@ -4,6 +4,7 @@ import AboutSection from '../components/About-section/about-section';
 import image from '../assets/shard.webp';
 import { useNavigate } from 'react-router-dom';
 import Reviews from '../components/Review-section/reviews';
+import CallToAction from '@/components/call-to-action/call-to-action';
 
 const About: React.FC = () => {
   const navigate = useNavigate();
@@ -86,19 +87,7 @@ const About: React.FC = () => {
         <Reviews />
 
         {/* CTA Section */}
-        <div className="mt-12 text-center">
-          <h2 className="text-3xl font-semibold mb-4">Ready to Get Started?</h2>
-          <p className="text-gray-700 mb-6">
-            Contact us today to discuss your property financing needs and
-            discover how we can help you achieve your investment goals.
-          </p>
-          <Button
-            className="bg-gradient-to-r from-swampGreen to-blue-500 hover:from-pink-500 hover:to-yellow-500"
-            onClick={() => navigate('/contact-us')}
-          >
-            Contact Us
-          </Button>
-        </div>
+        <CallToAction />
       </div>
     </div>
   );

@@ -1,9 +1,15 @@
 import { useState } from 'react';
 import { Button } from '@material-tailwind/react';
 
-export function ButtonGroup() {
-  const [selectedButton, setSelectedButton] = useState('');
+type ButtonGroupProps = {
+  setSelectedButton: (value: string) => void;
+  selectedButton: string;
+};
 
+export function ButtonGroup({
+  setSelectedButton,
+  selectedButton,
+}: ButtonGroupProps) {
   const handleButtonClick = (value: string) => {
     setSelectedButton(value);
   };
