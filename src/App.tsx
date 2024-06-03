@@ -1,68 +1,78 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import HomePage from './pages/Home';
 import Layout from './components/Layout/layout';
-import AboutPage from './pages/About';
-import BlogPage from './pages/Blog';
-import ServicesPage from './pages/Services';
-import ContactPage from './pages/Contact';
-import NotFoundPage from './pages/NoPage';
-import PrivacyPage from './pages/PrivacyPolicy';
+import React from 'react';
+import { Spinner } from '@material-tailwind/react';
 // import { Toaster } from 'react-hot-toast';
+
+const HomePage = React.lazy(() => import('./pages/Home'));
+const AboutPage = React.lazy(() => import('./pages/About'));
+const ServicesPage = React.lazy(() => import('./pages/Services'));
+const ContactPage = React.lazy(() => import('./pages/Contact'));
+const NotFoundPage = React.lazy(() => import('./pages/NoPage'));
+const PrivacyPage = React.lazy(() => import('./pages/PrivacyPolicy'));
 
 function App() {
   return (
     <BrowserRouter>
-      <Routes>
-        <Route
-          path="/"
-          element={
-            <Layout title="Home | PWOFinances">
-              <HomePage />
-            </Layout>
-          }
-        />
-        <Route
-          path="/about-us"
-          element={
-            <Layout title="About | PWOFinances">
-              <AboutPage />
-            </Layout>
-          }
-        />
+      <React.Suspense
+        fallback={
+          <div className="flex justify-center items-center min-h-screen">
+            <Spinner className="h-12 w-12" color="light-blue" />
+          </div>
+        }
+      >
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <Layout title="Home | PWOFinances">
+                <HomePage />
+              </Layout>
+            }
+          />
+          <Route
+            path="/about-us"
+            element={
+              <Layout title="About | PWOFinances">
+                <AboutPage />
+              </Layout>
+            }
+          />
 
-        <Route
-          path="/services"
-          element={
-            <Layout title="Services | PWOFinances">
-              <ServicesPage />
-            </Layout>
-          }
-        />
-        <Route
-          path="/contact-us"
-          element={
-            <Layout title="Contact | PWOFinances">
-              <ContactPage />
-            </Layout>
-          }
-        />
-        <Route
-          path="/privacy-policy"
-          element={
-            <Layout title="Privacy Policy | PWOFinances">
-              <PrivacyPage />
-            </Layout>
-          }
-        />
-        <Route
-          path="*"
-          element={
-            <Layout title="404:Page Not Found | PWOFinances">
-              <NotFoundPage />
-            </Layout>
-          }
-        />
-      </Routes>
+          <Route
+            path="/services"
+            element={
+              <Layout title="Services | PWOFinances">
+                <ServicesPage />
+              </Layout>
+            }
+          />
+          <Route
+            path="/contact-us"
+            element={
+              <Layout title="Contact | PWOFinances">
+                <ContactPage />
+              </Layout>
+            }
+          />
+          <Route
+            path="/privacy-policy"
+            element={
+              <Layout title="Privacy Policy | PWOFinances">
+                <PrivacyPage />
+              </Layout>
+            }
+          />
+          <Route
+            path="*"
+            element={
+              <Layout title="404:Page Not Found | PWOFinances">
+                <NotFoundPage />
+              </Layout>
+            }
+          />
+        </Routes>
+      </React.Suspense>
     </BrowserRouter>
   );
 }
