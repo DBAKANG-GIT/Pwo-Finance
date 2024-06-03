@@ -10,7 +10,7 @@ import {
   Button,
 } from '@material-tailwind/react';
 
-export function InputWithDropdown() {
+export default function InputWithDropdown() {
   const { countries } = useCountries();
   const defaultCountryIndex = countries.findIndex(
     (country: { name: string }) => country.name === 'United Kingdom'

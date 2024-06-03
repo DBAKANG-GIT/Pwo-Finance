@@ -7,7 +7,7 @@ export function SocialLinks() {
       <Typography
         href="https://www.linkedin.com/company/pwofinance/"
         as="a"
-        className="opacity-80 transition-opacity hover:opacity-100"
+        className="opacity-80 transition-opacity hover:text-blue-400 hover:opacity-100"
         target="_blank"
         rel="noopener noreferrer"
       >
@@ -28,7 +28,7 @@ export function SocialLinks() {
       <Typography
         as="a"
         href="https://g.page/r/CTdfApeyrzZ4EBM/review"
-        className="opacity-80 transition-opacity hover:opacity-100"
+        className="opacity-80 transition-opacity hover:text-blue-400 hover:opacity-100"
         target="_blank"
         rel="noopener noreferrer"
       >
@@ -49,7 +49,7 @@ export function SocialLinks() {
       <Typography
         as="a"
         href="https://x.com/Pwomortgages"
-        className="opacity-80 transition-opacity hover:opacity-100"
+        className="opacity-80 transition-opacity hover:text-blue-400 hover:opacity-100"
       >
         <svg
           className="h-5 w-5"

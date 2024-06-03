@@ -1,8 +1,11 @@
-import { InputWithDropdown } from '../Input-dropdown/Input-dropdown';
 import { Button, Input, Textarea, Typography } from '@material-tailwind/react';
 import { ButtonGroup } from '@/components/button-group/button-group';
-import { useState } from 'react';
+import { Suspense, useState } from 'react';
+import React from 'react';
 
+const InputWithDropdown = React.lazy(
+  () => import('../Input-dropdown/Input-dropdown')
+);
 interface ContactSectionProps {
   formAction: string;
 }
@@ -82,7 +85,9 @@ export function ContactSection({ formAction }: ContactSectionProps) {
               className: '',
             }}
           />
-          <InputWithDropdown />
+          <Suspense fallback={<div>Loading...</div>}>
+            <InputWithDropdown />
+          </Suspense>
         </div>
 
         <div className="grid md:grid-cols-2 gap-4">
