@@ -1,7 +1,6 @@
 import React from 'react';
 import { Button } from '@material-tailwind/react';
 import AboutSection from '../components/About-section/about-section';
-import image from '../assets/shard.webp';
 import { useNavigate } from 'react-router-dom';
 import Reviews from '../components/Review-section/reviews';
 import CallToAction from '@/components/call-to-action/call-to-action';
@@ -74,7 +73,7 @@ const About: React.FC = () => {
             {/* Image section on the right */}
             <div className="p-6 bg-[#f3e6de] rounded-[25px] shadow-md relative overflow-hidden custom-shape">
               <img
-                src={image}
+                src="https://d3epydxhc58hrf.cloudfront.net/shard.webp"
                 alt="Cityscape"
                 className="w-full h-full object-cover rounded-[20px] transform transition-transform duration-300 ease-in-out hover:scale-105"
               />

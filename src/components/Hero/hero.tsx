@@ -1,5 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Poster from '../../assets/Hero-Page.webp';
+
 interface HeroProps {
   title: string;
   subtitle: string;
@@ -21,6 +23,7 @@ const Hero: React.FC<HeroProps> = ({
         <video
           src={video}
           autoPlay
+          poster="https://d3epydxhc58hrf.cloudfront.net/Hero-Page.webp"
           loop
           muted
           playsInline
