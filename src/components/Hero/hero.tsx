@@ -1,7 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Poster from '../../assets/Hero-Page.webp';
-
 interface HeroProps {
   title: string;
   subtitle: string;
