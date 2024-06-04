@@ -2,30 +2,51 @@ import { Button, Input, Textarea, Typography } from '@material-tailwind/react';
 import { ButtonGroup } from '@/components/button-group/button-group';
 import { Suspense, useState } from 'react';
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const InputWithDropdown = React.lazy(
   () => import('../Input-dropdown/Input-dropdown')
 );
+
 interface ContactSectionProps {
   formAction: string;
 }
 
 export function ContactSection({ formAction }: ContactSectionProps) {
   const [selectedButton, setSelectedButton] = useState('');
+  const navigate = useNavigate();
+
+  const handleFormSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+
+    const myForm = event.currentTarget;
+    const formData = new FormData(myForm);
+
+    const formDataEntries = Array.from(formData.entries()) as string[][];
+
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: new URLSearchParams(formDataEntries).toString(),
+    });
+
+    navigate('/success');
+  };
 
   return (
-    <section className="grid  items-start">
+    <section className="grid items-start">
       <form
         name="callback-form"
         id="callback-form"
         action={formAction}
-        className="flex flex-col gap-4"
+        className="flex flex-col gap-6"
         method="post"
+        onSubmit={handleFormSubmit}
       >
         <input type="hidden" name="form-name" value="callback-form" />
         <Typography
           variant="small"
-          className="text-left !font-semibold !text-gray-600"
+          className="text-left font-semibold text-gray-800"
         >
           Select Options for Business Engagement
         </Typography>
@@ -34,6 +55,7 @@ export function ContactSection({ formAction }: ContactSectionProps) {
             setSelectedButton={setSelectedButton}
             selectedButton={selectedButton}
           />
+          <input type="hidden" name="support" value={selectedButton} />{' '}
         </div>
         <div className="grid md:grid-cols-2 gap-4">
           <Input
@@ -42,16 +64,9 @@ export function ContactSection({ formAction }: ContactSectionProps) {
             size="lg"
             name="first-name"
             label="First Name"
-            className="focus:border-t-gray-900"
             required={true}
-            containerProps={{
-              className: 'min-w-full',
-            }}
-            labelProps={{
-              className: '',
-            }}
+            containerProps={{ className: 'min-w-full' }}
           />
-
           <Input
             type="text"
             color="gray"
@@ -59,37 +74,23 @@ export function ContactSection({ formAction }: ContactSectionProps) {
             label="Last Name"
             name="last-name"
             required={true}
-            className="focus:border-t-gray-900"
-            containerProps={{
-              className: '!min-w-full',
-            }}
-            labelProps={{
-              className: '',
-            }}
+            containerProps={{ className: 'min-w-full' }}
           />
         </div>
-
         <div className="grid md:grid-cols-2 gap-4">
           <Input
             type="email"
             color="gray"
             size="lg"
-            label="name@email.com"
+            label="Email"
             name="email"
             required={true}
-            className="focus:border-t-gray-900"
-            containerProps={{
-              className: '!min-w-full',
-            }}
-            labelProps={{
-              className: '',
-            }}
+            containerProps={{ className: 'min-w-full' }}
           />
           <Suspense fallback={<div>Loading...</div>}>
             <InputWithDropdown />
           </Suspense>
         </div>
-
         <div className="grid md:grid-cols-2 gap-4">
           <Input
             type="date"
@@ -99,13 +100,7 @@ export function ContactSection({ formAction }: ContactSectionProps) {
             label="Preferred Date"
             required={true}
             name="preferred-date"
-            className="focus:border-t-gray-900"
-            containerProps={{
-              className: '!min-w-full',
-            }}
-            labelProps={{
-              className: '',
-            }}
+            containerProps={{ className: 'min-w-full' }}
           />
           <Input
             type="time"
@@ -114,32 +109,21 @@ export function ContactSection({ formAction }: ContactSectionProps) {
             label="Preferred Time"
             required={true}
             name="preferred-time"
-            className="focus:border-t-gray-900"
-            containerProps={{
-              className: '!min-w-full',
-            }}
-            labelProps={{
-              className: '',
-            }}
+            containerProps={{ className: 'min-w-full' }}
           />
         </div>
-
         <Textarea
           rows={6}
           color="gray"
           label="How can we help you?"
           required={true}
           name="message"
-          className="focus:border-t-gray-900"
-          containerProps={{
-            className: '!min-w-full',
-          }}
-          labelProps={{
-            className: '',
-          }}
+          containerProps={{ className: 'min-w-full' }}
         />
-
-        <Button type="submit" className="w-full" color="gray">
+        <Button
+          className="w-full md:w-auto bg-gradient-to-r from-swampGreen to-blue-500 hover:from-pink-500 hover:to-yellow-500"
+          type="submit"
+        >
           Send Enquiry
         </Button>
       </form>

@@ -10,6 +10,7 @@ const ServicesPage = React.lazy(() => import('./pages/Services'));
 const ContactPage = React.lazy(() => import('./pages/Contact'));
 const NotFoundPage = React.lazy(() => import('./pages/NoPage'));
 const PrivacyPage = React.lazy(() => import('./pages/PrivacyPolicy'));
+const SuccessPage = React.lazy(() => import('./pages/SuccessPage'));
 
 function App() {
   return (
@@ -60,6 +61,14 @@ function App() {
             element={
               <Layout title="Privacy Policy | PWO Finances">
                 <PrivacyPage />
+              </Layout>
+            }
+          />
+          <Route
+            path="/success"
+            element={
+              <Layout title="Submission Successful | PWO Finances">
+                <SuccessPage />
               </Layout>
             }
           />
