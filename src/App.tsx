@@ -25,7 +25,7 @@ function App() {
           <Route
             path="/"
             element={
-              <Layout title="Home | PWOFinances">
+              <Layout title="Home | PWO Finances">
                 <HomePage />
               </Layout>
             }
@@ -33,7 +33,7 @@ function App() {
           <Route
             path="/about-us"
             element={
-              <Layout title="About | PWOFinances">
+              <Layout title="About | PWO Finances">
                 <AboutPage />
               </Layout>
             }
@@ -42,7 +42,7 @@ function App() {
           <Route
             path="/services"
             element={
-              <Layout title="Services | PWOFinances">
+              <Layout title="Services | PWO Finances">
                 <ServicesPage />
               </Layout>
             }
@@ -50,7 +50,7 @@ function App() {
           <Route
             path="/contact-us"
             element={
-              <Layout title="Contact | PWOFinances">
+              <Layout title="Contact | PWO Finances">
                 <ContactPage />
               </Layout>
             }
@@ -58,7 +58,7 @@ function App() {
           <Route
             path="/privacy-policy"
             element={
-              <Layout title="Privacy Policy | PWOFinances">
+              <Layout title="Privacy Policy | PWO Finances">
                 <PrivacyPage />
               </Layout>
             }
@@ -66,7 +66,7 @@ function App() {
           <Route
             path="*"
             element={
-              <Layout title="404:Page Not Found | PWOFinances">
+              <Layout title="404:Page Not Found | PWO Finances">
                 <NotFoundPage />
               </Layout>
             }
