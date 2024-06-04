@@ -9,7 +9,7 @@ const Contact: React.FC = () => {
       <ContactHeader title="Contact Form" subtitle="Get In Touch" />
       <br />
       <div className="max-w-xl w-full">
-        <ContactForm formAction="#" />
+        <ContactForm formAction="/success" />
       </div>
       <Typography
         className="font-normal text-sm md:text-lg text-gray-800 text-left mt-8 max-w-xl mx-auto"
