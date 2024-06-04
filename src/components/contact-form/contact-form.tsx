@@ -21,6 +21,8 @@ export function ContactSection({ formAction }: ContactSectionProps) {
 
     const myForm = event.currentTarget;
     const formData = new FormData(myForm);
+    formData.append('button', selectedButton); // Add the selected button to the form data
+
     const formDataEntries = Array.from(formData.entries()) as string[][];
 
     fetch('/', {
@@ -54,6 +56,7 @@ export function ContactSection({ formAction }: ContactSectionProps) {
             setSelectedButton={setSelectedButton}
             selectedButton={selectedButton}
           />
+          <input type="hidden" name="button" value={selectedButton} />{' '}
         </div>
         <div className="grid md:grid-cols-2 gap-4">
           <Input
