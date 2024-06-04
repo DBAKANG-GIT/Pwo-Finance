@@ -13,7 +13,7 @@ interface ContactSectionProps {
 }
 
 export function ContactSection({ formAction }: ContactSectionProps) {
-  const [selectedButton, setSelectedButton] = useState('');
+  const [, setSelectedButton] = useState('');
   const navigate = useNavigate();
 
   const handleFormSubmit = (event: React.FormEvent<HTMLFormElement>) => {
@@ -21,7 +21,6 @@ export function ContactSection({ formAction }: ContactSectionProps) {
 
     const myForm = event.currentTarget;
     const formData = new FormData(myForm);
-    formData.append('button', selectedButton); // Add the selected button to the form data
 
     const formDataEntries = Array.from(formData.entries()) as string[][];
 
