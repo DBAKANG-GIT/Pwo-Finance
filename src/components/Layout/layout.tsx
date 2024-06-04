@@ -5,8 +5,8 @@ import useDocumentTitle from '@/hooks/useDocumentTitle';
 import { useEffect } from 'react';
 const navItems = [
   { text: 'About', href: '/about-us' },
-  { text: 'Contact', href: '/contact-us' },
   { text: 'Services', href: '/services' },
+  { text: 'Contact', href: '/contact-us' },
 ];
 
 const footerItems = [
