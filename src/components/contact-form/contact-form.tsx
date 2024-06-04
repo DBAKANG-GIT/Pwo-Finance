@@ -13,7 +13,7 @@ interface ContactSectionProps {
 }
 
 export function ContactSection({ formAction }: ContactSectionProps) {
-  const [, setSelectedButton] = useState('');
+  const [selectedButton, setSelectedButton] = useState('');
   const navigate = useNavigate();
 
   const handleFormSubmit = (event: React.FormEvent<HTMLFormElement>) => {
