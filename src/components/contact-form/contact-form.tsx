@@ -2,6 +2,7 @@ import { Button, Input, Textarea, Typography } from '@material-tailwind/react';
 import { ButtonGroup } from '@/components/button-group/button-group';
 import { Suspense, useState } from 'react';
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const InputWithDropdown = React.lazy(
   () => import('../Input-dropdown/Input-dropdown')
@@ -13,6 +14,23 @@ interface ContactSectionProps {
 
 export function ContactSection({ formAction }: ContactSectionProps) {
   const [selectedButton, setSelectedButton] = useState('');
+  const navigate = useNavigate();
+
+  const handleFormSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+
+    const myForm = event.currentTarget;
+    const formData = new FormData(myForm);
+    const formDataEntries = Array.from(formData.entries()) as string[][];
+
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: new URLSearchParams(formDataEntries).toString(),
+    });
+
+    navigate('/success');
+  };
 
   return (
     <section className="grid items-start">
@@ -22,6 +40,7 @@ export function ContactSection({ formAction }: ContactSectionProps) {
         action={formAction}
         className="flex flex-col gap-6"
         method="post"
+        onSubmit={handleFormSubmit}
       >
         <input type="hidden" name="form-name" value="callback-form" />
         <Typography
