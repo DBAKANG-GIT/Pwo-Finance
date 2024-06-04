@@ -55,7 +55,7 @@ export function ContactSection({ formAction }: ContactSectionProps) {
             setSelectedButton={setSelectedButton}
             selectedButton={selectedButton}
           />
-          <input type="hidden" name="button" value={selectedButton} />{' '}
+          <input type="hidden" name="support" value={selectedButton} />{' '}
         </div>
         <div className="grid md:grid-cols-2 gap-4">
           <Input
