@@ -49,6 +49,8 @@ export function FooterWithLogo({ logo, items }: FooterWithLogoProps) {
           href="https://porfoliowebpage.netlify.app/"
           color="blue-gray"
           className="font-normal"
+          target="_blank"
+          rel="noopener noreferrer"
         >
           Website by David Akang
         </Typography>
