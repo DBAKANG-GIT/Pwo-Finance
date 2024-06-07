@@ -50,6 +50,8 @@ export function SocialLinks() {
         as="a"
         href="https://x.com/Pwomortgages"
         className="opacity-80 transition-opacity hover:text-blue-400 hover:opacity-100"
+        target="_blank"
+        rel="noopener noreferrer"
       >
         <svg
           className="h-5 w-5"
