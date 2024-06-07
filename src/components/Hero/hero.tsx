@@ -26,6 +26,7 @@ const Hero: React.FC<HeroProps> = ({
           muted
           playsInline
           className="object-cover object-center w-full h-full"
+          disablePictureInPicture
         />
         <div className="absolute inset-0 bg-black opacity-50"></div>
       </div>

@@ -4,7 +4,6 @@ import AboutSection from '../components/About-section/about-section';
 import { useNavigate } from 'react-router-dom';
 import Reviews from '../components/Review-section/reviews';
 import CallToAction from '@/components/call-to-action/call-to-action';
-
 const About: React.FC = () => {
   const navigate = useNavigate();
   return (
