@@ -22,12 +22,11 @@ export function ContactSection({ formAction }: ContactSectionProps) {
     const myForm = event.currentTarget;
     const formData = new FormData(myForm);
 
-    const formDataEntries = Array.from(formData.entries()) as string[][];
+    // const formDataEntries = Array.from(formData.entries()) as string[][];
 
     fetch('/', {
       method: 'POST',
-      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: new URLSearchParams(formDataEntries).toString(),
+      body: formData,
     });
 
     navigate('/success');
