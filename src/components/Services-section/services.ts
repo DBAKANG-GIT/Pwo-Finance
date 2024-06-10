@@ -29,4 +29,10 @@ export const services: Service[] = [
       'Tailored Mortgage Solutions For Commercial Properties, Ensuring Financial Viability And Growth.',
     image: 'https://d3epydxhc58hrf.cloudfront.net/CommercialFinance.webp',
   },
+  {
+    title: 'Buy to Let',
+    description:
+      'Specialist advice and solutions for purchasing properties to rent out to tenants.',
+    image: 'https://d3epydxhc58hrf.cloudfront.net/BuyToLet.webp',
+  },
 ];
