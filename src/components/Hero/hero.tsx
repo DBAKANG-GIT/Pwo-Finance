@@ -21,7 +21,7 @@ const Hero: React.FC<HeroProps> = ({
         <video
           src={video}
           autoPlay
-          poster="https://d3epydxhc58hrf.cloudfront.net/Hero-Page.webp"
+          poster="https://d3epydxhc58hrf.cloudfront.net/FirstFrame.webp"
           loop
           muted
           playsInline
