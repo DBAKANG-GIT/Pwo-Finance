@@ -54,9 +54,26 @@ export function FooterWithLogo({ logo, items }: FooterWithLogoProps) {
         >
           Website by David Akang
         </Typography>
+        <hr className="my-8 border-blue-gray-50" />
+
+        {Caveat()}
       </div>
 
       <hr className="my-8 border-blue-gray-50" />
     </footer>
   );
+
+  function Caveat() {
+    return (
+      <div className="mt-4 text-center text-sm text-gray-600">
+        <p>
+          Investing in real estate carries risks, and there is a possibility of
+          losing money and other assets. If you have any uncertainties regarding
+          property investments or unregulated mortgages offered by us, we
+          strongly advise you to seek guidance from a regulated professional who
+          specializes in providing advice on such services.
+        </p>
+      </div>
+    );
+  }
 }

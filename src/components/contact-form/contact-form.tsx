@@ -22,12 +22,11 @@ export function ContactSection({ formAction }: ContactSectionProps) {
     const myForm = event.currentTarget;
     const formData = new FormData(myForm);
 
-    const formDataEntries = Array.from(formData.entries()) as string[][];
+    // const formDataEntries = Array.from(formData.entries()) as string[][];
 
     fetch('/', {
       method: 'POST',
-      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: new URLSearchParams(formDataEntries).toString(),
+      body: formData,
     });
 
     navigate('/success');
@@ -120,6 +119,19 @@ export function ContactSection({ formAction }: ContactSectionProps) {
           name="message"
           containerProps={{ className: 'min-w-full' }}
         />
+        <div className="grid gap-4">
+          <Typography className="text-left font-semibold text-gray-800">
+            Upload Documents
+          </Typography>
+          <input
+            type="file"
+            name="document"
+            accept=".pdf,.doc,.docx,.jpg,.png"
+            className="block w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:text-sm file:font-semibold file:bg-gray-100 file:text-gray-700 hover:file:bg-gray-200"
+            multiple
+          />
+        </div>
+
         <Button
           className="w-full md:w-auto bg-gradient-to-r from-swampGreen to-blue-500 hover:from-pink-500 hover:to-yellow-500"
           type="submit"

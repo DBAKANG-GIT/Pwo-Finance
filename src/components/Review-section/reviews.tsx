@@ -3,7 +3,6 @@ import { Button, Typography } from '@material-tailwind/react';
 type Review = {
   name: string;
   review: string;
-  response: string;
   time: string;
 };
 
@@ -12,47 +11,36 @@ const reviews = [
     name: 'Offic!al',
     review:
       'PWO finance is the one stop shop. A dedicated team of professionals who take great pride in what they do and how it is achieved.',
-    response: 'Thanks, always glad to be of service!! Keep at it!!',
     time: '2 years ago',
   },
   {
     name: 'addis addis',
     review:
       'Very professional, they know what they do and Excellent customer service.',
-    response:
-      'Thanks Mesfin, we sincerely appreciate the review and look forward to be of more service!',
     time: '9 months ago',
   },
   {
     name: 'victor Eriamiator',
     review:
       'The service they provided me was first class, and in my years of property management they are the best.',
-    response:
-      'Thanks Victor, you have been a very valuable client and we are very grateful to be of service to you!! Humbled by your review, Thank you!!',
     time: '2 years ago',
   },
   {
     name: 'sandra yamoah',
     review:
       'Very professional, helpful, understanding and value and always aim to provide individualize customer service.',
-    response:
-      'Thank you Sandra, we are always delighted to be of service. Very glad that you appreciated our service.',
     time: '2 years ago',
   },
   {
     name: 'Priscilla Nyathi',
     review:
       'Exceptional service for many years, highly experienced and reliable service provider in all their dealings...',
-    response:
-      'Thank you Priscilla!! We are very grateful to be of service and appreciate your kind words!! May God bless you abundantly!!',
     time: 'a year ago',
   },
   {
     name: 'Thelma Allen',
     review:
       'PWO Finance, thank you for your excellent professional and honest service.',
-    response:
-      'Thanks Thelma. We are always happy to help people work efficiently in the property market and protect the value they worked hard for!!',
     time: '2 years ago',
   },
 ];
@@ -67,9 +55,6 @@ const TestimonialCard = ({ review }: { review: Review }) => {
         </div>
       </div>
       <Typography className="text-gray-700 mb-4">{review.review}</Typography>
-      <Typography className="text-gray-600 italic">
-        "{review.response}"
-      </Typography>
     </div>
   );
 };
