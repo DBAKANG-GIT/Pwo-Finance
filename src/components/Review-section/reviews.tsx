@@ -3,7 +3,6 @@ import { Button, Typography } from '@material-tailwind/react';
 type Review = {
   name: string;
   review: string;
-  response: string;
   time: string;
 };
 
