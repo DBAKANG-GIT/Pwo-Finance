@@ -50,10 +50,10 @@ const Contact: React.FC = () => {
         <Typography variant="h6" className="text-gray-800">
           Email:{' '}
           <a
-            href="mailto:info@pwofinance.com"
+            href="mailto:williamomony@pwofinance.co.uk"
             className="underline text-blue-600 hover:text-blue-800"
           >
-            info@pwofinance.com
+            williamomony@pwofinance.co.uk
           </a>
         </Typography>
         <hr className="my-8 border-blue-gray-50" />
